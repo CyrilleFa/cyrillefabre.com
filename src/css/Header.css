@@ -1,0 +1,38 @@
+/**************************
+           Navbar
+**************************/
+
+.navbar-container > ul {
+  display: flex;
+  justify-content: space-around;
+  line-height: 36px;
+}
+
+.menu-list {
+  list-style-type: none;
+  background-color: #614491;
+}
+
+.menu-list-item {
+  padding: 5px 0px;
+  font-size: 24px;
+}
+
+.menu-list-item > a {
+  text-decoration: none;
+  color: #b1bbe7;
+}
+
+/**************************
+      Responsive  Design
+**************************/
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) {
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 992px) {
+}
