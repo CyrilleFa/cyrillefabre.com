@@ -5,28 +5,52 @@ const Cards = (props) => {
   const [isFlipped, toggle] = useState(false);
 
   return (
-    <div>
+    <div className='project-item'>
       <Flippy
         flipOnHover={false}
         flipOnClick={true}
         flipDirection='horizontal'
-        style={{ width: '200px', height: '200px' }}
+        style={{
+          'min-width': '200px',
+          'min-height': '200px',
+          backgroundColor: 'gray',
+        }}
       >
         {isFlipped ? (
-          <BackSide style={{ backgroundColor: '#175852' }}>
-            <h2>{props.details}</h2>
-            <button onClick={() => toggle(!isFlipped)}>ROCKS</button>
+          <BackSide
+            style={{
+              backgroundColor: '#DDDDDD',
+              'text-align': 'center',
+              'max-width': '400px',
+              height: '200px',
+            }}
+          >
+            <h2>
+              {props.id} / {props.name}
+            </h2>
+            <p>{props.details}</p>
+            <button className='btn-card' onClick={() => toggle(!isFlipped)}>
+              Infos
+            </button>
           </BackSide>
         ) : (
           <FrontSide
             style={{
-              backgroundColor: '#41669d',
+              backgroundColor: '#1687a7',
+              'text-align': 'center',
+              'min-width': '200px',
+              'min-height': '200px',
             }}
           >
-            <h2>
-              {props.id} : {props.name}
-            </h2>
-            <button onClick={() => toggle(!isFlipped)}>RICK</button>
+            <a href={props.url} target='_blank' rel='noreferrer'>
+              <h2>
+                {props.id} / {props.name} ( {props.type} )
+              </h2>
+            </a>
+            <p>{props.infos}</p>
+            <button className='btn-card' onClick={() => toggle(!isFlipped)}>
+              Languages
+            </button>
           </FrontSide>
         )}
       </Flippy>

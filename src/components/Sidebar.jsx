@@ -3,7 +3,7 @@ import '../css/Sidebar.css';
 
 const Sidebar = (props) => {
   return (
-    <Menu right>
+    <Menu right className='hidden-mobile'>
       <a className='menu-item' href='/'>
         Home
       </a>

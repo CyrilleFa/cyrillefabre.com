@@ -6,9 +6,13 @@ const Header = () => {
   return (
     <header>
       <div className='bg-container'>
-        <img className='bg-img' src='' alt='This is a website made with love' />
+        {/* <img
+          className='bg-img'
+          src='https://www.allo-infopc.com/wp-content/uploads/2020/10/business-5475661_1280-750x458.jpg'
+          alt='How developers code'
+        /> */}
       </div>
-      <nav className='navbar-container desktop'>
+      <nav className='navbar-container hidden-desktop'>
         <ul className='menu-list'>
           <li className='menu-list-item'>
             <NavLink to='/'>Homepage</NavLink>

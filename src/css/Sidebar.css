@@ -4,12 +4,16 @@
   width: 36px;
   height: 30px;
   right: 36px;
-  top: 36px;
+  top: 6px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #383a46;
+  background: #dedede;
+}
+
+.bm-burger-button:visited {
+  background: silver !important;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -67,4 +71,10 @@ Sidebar wrapper styles /!\
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 992px) {
+  .bm-burger-button {
+    display: none;
+  }
 }
