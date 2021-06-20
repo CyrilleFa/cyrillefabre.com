@@ -7,16 +7,26 @@
   margin: 0 auto;
   box-shadow: 1px 3px 3px 2px black;
   border-radius: 20px;
+  background-image: linear-gradient(45deg, #6285bc, #66666b);
+}
+
+.project-container a {
+  color: #0d0d0d;
+  text-decoration: none;
+}
+
+.project-container a:hover {
+  text-decoration: underline;
 }
 
 .project-item {
   flex: 1 80%;
   margin: 2%;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
   border-radius: 20px;
-  border: 2px rgb(133, 207, 84) solid;
-  box-shadow: 1px 3px 1px 2px black;
+  box-shadow: 1px 2px 1px 1px black;
+  color: white;
 }
 
 .btn-card {
@@ -25,12 +35,27 @@
   border-radius: 10px;
 }
 
+.btn-card:hover {
+  cursor: pointer;
+}
+
 .flippy-card,
 .flippy-container {
   max-width: 400px !important;
   border-radius: 20px;
 }
 
-.solo {
-  background-color: yellow;
+.project-item h2 {
+  border-bottom: none;
+  color: #0d0d0d;
+  font-style: unset;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-item h2 i {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #3079c2;
 }

@@ -1,7 +1,7 @@
-import Cards from './Cards.jsx';
-import '../css/Projects.css';
+import SkillList from './SkillList.jsx';
+import '../css/Skills.css';
 
-const cards = [
+const skillList = [
   {
     id: 1,
     name: 'Tribute to Mom',
@@ -9,7 +9,7 @@ const cards = [
     details: 'Front : React.js, Javascript, Back : Node.js',
     infos:
       '(WIP) Tribute to the most important person to me, she inspired me to do what i was made for : coding.',
-    solo: true,
+    type: 'Solo',
     hackathon: false,
   },
   {
@@ -18,7 +18,7 @@ const cards = [
     url: 'https://www.wildtrip.fr',
     details: 'Front : HTML / CSS / Javascript, Back : None',
     infos: 'A simple travel blog, with validating error contact form.',
-    solo: false,
+    type: 'Team',
     hackathon: false,
   },
   {
@@ -27,7 +27,7 @@ const cards = [
     url: 'https://www.adopte1gueux.com',
     details: 'Front : React / CSS, Back : Node / Express',
     infos: 'A react meeting app for poor people back to Middle-Age',
-    solo: false,
+    type: 'Team',
     hackathon: true,
   },
   {
@@ -35,8 +35,9 @@ const cards = [
     name: 'Hearthstone Finder',
     url: 'https://www.hearthstone-finder.com/',
     details: 'Front : React / CSS, Back : Node / Express',
-    infos: 'A react app to find some Hearthstone cards into an online catalog.',
-    solo: false,
+    infos:
+      'A react app to find some Hearthstone skills into an online catalog.',
+    type: 'Team',
     hackathon: false,
   },
   {
@@ -45,16 +46,16 @@ const cards = [
     url: 'https://www.cyrillefabre.com',
     details: 'Front : React / CSS, Back : Node / Express',
     infos: 'A react e-commerce app, we decided to sell feelings.',
-    solo: false,
+    type: 'Team',
     hackathon: true,
   },
   {
     id: 6,
-    name: 'Region Sud',
+    name: 'Regional encyclopedia : Region Sud',
     url: 'https://region-sud.woozy.fr/',
     details: 'Front : React / CSS, Back : Laravel',
     infos: 'A react regional encyclopedia made for Region Sud',
-    solo: false,
+    type: 'Team',
     hackathon: false,
   },
   {
@@ -62,34 +63,26 @@ const cards = [
     name: 'Pokemon Steam',
     url: 'https://www.pokemonsteam.fr',
     details: 'Front : React / CSS, No Back-End so far',
-    infos: 'A front-end website, designed for a fangame Pokemon',
-    solo: true,
-    hackathon: false,
-  },
-  {
-    id: 8,
-    name: 'My Portfolio',
-    url: 'https://www.cyrillefabre.com',
-    details: 'Front : React / CSS, No Back-End so far',
-    infos: 'A front-end website, designed to introduce my projects',
-    solo: true,
+    infos:
+      'A front-end website, designed to describe briefly a fangame Pokemon project',
+    type: 'Solo',
     hackathon: false,
   },
 ];
 
-export default function Projects() {
+export default function Skill() {
   return (
-    <div className='project-container'>
-      {cards.map((card) => {
+    <div className='skill-container'>
+      {skillList.map((skill) => {
         return (
-          <Cards
-            name={card.name}
-            details={card.details}
-            key={card.id}
-            url={card.url}
-            id={card.id}
-            infos={card.infos}
-            solo={card.solo}
+          <SkillList
+            name={skill.name}
+            details={skill.details}
+            key={skill.id}
+            url={skill.url}
+            id={skill.id}
+            infos={skill.infos}
+            type={skill.type}
           />
         );
       })}

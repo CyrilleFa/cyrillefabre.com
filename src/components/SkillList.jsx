@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
-const Cards = (props) => {
+const SkillList = (props) => {
   const [isFlipped, toggle] = useState(false);
 
   return (
     <div className='project-item'>
+      <h1>WIP</h1>
       <Flippy
         flipOnHover={false}
         flipOnClick={true}
@@ -38,7 +39,7 @@ const Cards = (props) => {
         ) : (
           <FrontSide
             style={{
-              backgroundColor: '#63CAF2',
+              backgroundColor: '#1687a7',
               'text-align': 'center',
               'min-width': '499px',
               'min-height': '230px',
@@ -46,15 +47,12 @@ const Cards = (props) => {
           >
             <a href={props.url} target='_blank' rel='noreferrer'>
               <h2>
-                {props.name} {'   '}
-                {props.solo ? (
-                  <i class='fas fa-user'></i>
-                ) : (
-                  <i class='fas fa-users'></i>
-                )}
+                {props.id} / {props.name} ( {props.type} )
               </h2>
             </a>
-            <p>{props.infos}</p>
+            <p>
+              {props.infos} {props.type ? 'Solo' : 'Team'}
+            </p>
             <button className='btn-card' onClick={() => toggle(!isFlipped)}>
               Languages
             </button>
@@ -65,6 +63,4 @@ const Cards = (props) => {
   );
 };
 
-export default Cards;
-
-// {props.id}
+export default SkillList;

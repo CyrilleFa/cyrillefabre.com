@@ -3,8 +3,8 @@ import '../css/About.css';
 export default function About() {
   return (
     <div className='intro-container'>
-      <h1>Quelques mots sur moi</h1>
-      <h2>Qui suis-je ?</h2>
+      <h1>Want to know some about me ?</h1>
+      <h2>Who am I ?</h2>
       <div className='presentation'>
         <img
           src='https://www.cyrillefabre.com/upload/portrait.jpg'
@@ -14,31 +14,48 @@ export default function About() {
           height='auto'
         />
         <p className='intro-items' id='first-item'>
-          Cyrille Fabre, développeur web junior, stack Javascript.
+          Cyrille Fabre, junior web developer, using fullstack Javascript
+          languages (React.js And Node.js). <br />
+          You'll find more about my skills and languages upon the right section
+          in the navbar.
         </p>
       </div>
-      <h2>Pourquoi me choisir ?</h2>
+      <h2>Why picking me first ?</h2>
 
       <p className='intro-items'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat
-        quam architecto ullam corporis, nostrum obcaecati sed sint eos natus
-        corrupti praesentium at illo perferendis accusantium ratione expedita
-        quia numquam voluptatem aliquid magnam! Sapiente enim officia laudantium
-        at id tenetur itaque accusamus, omnis voluptas magni optio, fuga qui
-        consectetur error.
+        Among all my experiences, I've succeeded in learning multiples fields,
+        such as bank, IT, health insurances. <br /> I'm curious and I really
+        enjoy broadening my skills with new professional challenges. <br />I
+        worked remotely for 6 months at the Wild Code School, with different
+        working groups, using Scrum methodology to develop our projects.
+        <br /> I'm used to Git / Github, co-working, and networking softwares
+        such as Slack, Discord, Google Meet, Microsoft Teams, Zoom.
+        <br />
+        Feel free to download my resume. <br />
+        <br />
+        <button
+          type='button'
+          className='btn'
+          target='_blank'
+          onClick={(e) => {
+            e.preventDefault();
+            window.open(
+              'http://www.cyrillefabre.com/upload/CvDev.pdf',
+              '_blank'
+            );
+          }}
+        >
+          Check my resume
+        </button>
       </p>
-      <h2>Comment me contacter?</h2>
-      <p className='intro-items'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea error quia
-        architecto sequi aliquam explicabo recusandae quibusdam dolor, illo,
-        voluptate earum quos cum a ipsam maxime accusamus delectus. Est aperiam
-        repellendus fuga at, porro totam nulla ipsam! Veniam esse recusandae
-        voluptatibus autem repellendus nihil doloremque asperiores perspiciatis?
-        Beatae rem dolore ullam officia commodi laudantium est modi incidunt
-        enim. Rerum quia ad, vero eos ipsa mollitia dicta dolores reiciendis
-        distinctio consectetur. Voluptatibus sapiente necessitatibus officia
-        temporibus.
-      </p>
+      <h2>How to reach me ?</h2>
+      <div className='contact-container'>
+        <ul className='contact-flex'>
+          <li className='contact-item'>Phone Number : On my resume</li>
+          <li className='contact-item'>Mail : On my resume</li>
+          <li className='contact-item'>Website : </li>
+        </ul>
+      </div>
     </div>
   );
 }
