@@ -1,0 +1,45 @@
+.intro-container {
+  /* border: ridge 3px white; */
+  border-radius: 20px;
+  box-shadow: 1px 3px 3px 2px black;
+  max-width: 80%;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  color: rgb(94, 29, 138);
+}
+
+h2 {
+  font-style: italic;
+}
+
+#first-item {
+  align-self: center;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.presentation {
+  display: flex;
+  width: 80%;
+  margin-right: auto;
+}
+
+.presentation img {
+  border: 1px double black;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.intro-items {
+  margin-bottom: 20px;
+}

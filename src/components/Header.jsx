@@ -6,11 +6,11 @@ const Header = () => {
   return (
     <header>
       <div className='bg-container'>
-        {/* <img
+        <img
           className='bg-img'
-          src='https://www.allo-infopc.com/wp-content/uploads/2020/10/business-5475661_1280-750x458.jpg'
+          src='https://www.cyrillefabre.com/upload/workingdev.jpg'
           alt='How developers code'
-        /> */}
+        />
       </div>
       <nav className='navbar-container hidden-desktop'>
         <ul className='menu-list'>

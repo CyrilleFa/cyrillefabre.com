@@ -1,7 +1,9 @@
 import './App.css';
 
 import { Switch, Route } from 'react-router-dom';
+import React from 'react';
 import Header from './components/Header';
+import About from './components/About';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
@@ -18,9 +20,11 @@ function App() {
         />
         <div id='page-wrap'></div>
       </div>
-      <Homepage />
+
       <Switch>
+        <Route exact path='/' component={Homepage} />
         <Route path='/projects' component={Projects} />
+        <Route path='/about' component={About} />
       </Switch>
       <Footer />
     </div>

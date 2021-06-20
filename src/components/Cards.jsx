@@ -12,8 +12,8 @@ const Cards = (props) => {
         flipDirection='horizontal'
         style={{
           'min-width': '200px',
-          'min-height': '200px',
-          backgroundColor: 'gray',
+          'min-height': '230px',
+          backgroundColor: 'transparent',
         }}
       >
         {isFlipped ? (
@@ -22,12 +22,14 @@ const Cards = (props) => {
               backgroundColor: '#DDDDDD',
               'text-align': 'center',
               'max-width': '400px',
-              height: '200px',
+              'min-height': '230px',
             }}
           >
-            <h2>
-              {props.id} / {props.name}
-            </h2>
+            <a href={props.url} target='_blank' rel='noreferrer'>
+              <h2>
+                {props.id} / {props.name}
+              </h2>
+            </a>
             <p>{props.details}</p>
             <button className='btn-card' onClick={() => toggle(!isFlipped)}>
               Infos
@@ -39,7 +41,7 @@ const Cards = (props) => {
               backgroundColor: '#1687a7',
               'text-align': 'center',
               'min-width': '200px',
-              'min-height': '200px',
+              'min-height': '230px',
             }}
           >
             <a href={props.url} target='_blank' rel='noreferrer'>
@@ -47,7 +49,9 @@ const Cards = (props) => {
                 {props.id} / {props.name} ( {props.type} )
               </h2>
             </a>
-            <p>{props.infos}</p>
+            <p>
+              {props.infos} {props.type ? 'Solo' : 'Team'}
+            </p>
             <button className='btn-card' onClick={() => toggle(!isFlipped)}>
               Languages
             </button>

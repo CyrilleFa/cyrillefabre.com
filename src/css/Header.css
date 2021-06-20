@@ -1,26 +1,27 @@
 .bg-img {
-  width: 100%;
-  height: auto;
   opacity: 0.7;
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
-.bg-container {
-  background-image: url('https://www.allo-infopc.com/wp-content/uploads/2020/10/business-5475661_1280-750x458.jpg');
+header {
+  background-color: gray;
+  box-sizing: border-box;
 }
 
 /**************************
            Navbar
 **************************/
 
-.navbar-container > ul {
-  display: flex;
-  justify-content: space-around;
-  line-height: 36px;
-}
-
 .menu-list {
   list-style-type: none;
   background-color: #614491;
+  margin: 0;
+  padding: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  line-height: 36px;
 }
 
 .menu-list-item {
