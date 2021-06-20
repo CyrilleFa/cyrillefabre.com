@@ -4,7 +4,7 @@ export default function Homepage() {
   return (
     <section className='homepage-container'>
       <h1>
-        Welcome to my website (Currently undergoing maintenance, so it might
+        Welcome to my website (Currently under live maintenance, so it might
         change)
       </h1>
       <h2>Website content</h2>

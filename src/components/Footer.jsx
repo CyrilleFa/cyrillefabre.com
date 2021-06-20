@@ -21,7 +21,12 @@ const Footer = () => {
         <div className='social-container'>
           <h3 className='social-follow footer-titre'>Social Networks</h3>
           <div className='social-icons'>
-            <a href='https://github.com/Cissou13' className='github social'>
+            <a
+              href='https://github.com/Cissou13'
+              className='github social'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i className='fab fa-github'></i>
             </a>
             <a

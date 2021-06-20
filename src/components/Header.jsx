@@ -8,29 +8,27 @@ const Header = () => {
       <div className='bg-container'>
         <img
           className='bg-img'
-          src='https://www.cyrillefabre.com/upload/workingdev.jpg'
+          src='https://www.cyrillefabre.com/upload/banner.jpg'
           alt='How developers code'
         />
+
+        <nav className='navbar-container hidden-desktop'>
+          <ul className='menu-list'>
+            <li className='menu-list-item'>
+              <NavLink to='/'>HOME</NavLink>
+            </li>
+            <li className='menu-list-item'>
+              <NavLink to='/about'>ABOUT ME</NavLink>
+            </li>
+            <li className='menu-list-item'>
+              <NavLink to='/projects'>MY PROJECTS</NavLink>
+            </li>
+            <li className='menu-list-item'>
+              <NavLink to='/skills'>SKILLS & EXPERIENCES</NavLink>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav className='navbar-container hidden-desktop'>
-        <ul className='menu-list'>
-          <li className='menu-list-item'>
-            <NavLink to='/'>Homepage</NavLink>
-          </li>
-          <li className='menu-list-item'>
-            <NavLink to='/about'>About me</NavLink>
-          </li>
-          <li className='menu-list-item'>
-            <NavLink to='/projects'>My Projects</NavLink>
-          </li>
-          <li className='menu-list-item'>
-            <NavLink to='/skills'>Skills & Experiences</NavLink>
-          </li>
-          {/* <li className='menu-list-item'>
-            <NavLink to='/skills#experiences'>Experiences</NavLink>
-          </li> */}
-        </ul>
-      </nav>
     </header>
   );
 };

@@ -11,6 +11,14 @@
   align-items: center;
 }
 
+.intro-container a {
+  color: unset;
+}
+
+.contact-container a {
+  text-decoration: none;
+}
+
 .btn {
   margin: 0 auto;
   border-radius: 20px;
@@ -49,8 +57,8 @@ h2 {
 }
 
 .presentation img {
-  border: 1px double black;
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.685);
+  border-radius: 50%;
   margin-left: 5px;
 }
 
@@ -70,6 +78,6 @@ h2 {
 
 .contact-item {
   list-style-type: none;
-
+  padding-left: 50px;
   width: 30%;
 }

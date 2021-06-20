@@ -1,9 +1,9 @@
 import '../css/About.css';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
     <div className='intro-container'>
-      <h1>Want to know some about me ?</h1>
       <h2>Who am I ?</h2>
       <div className='presentation'>
         <img
@@ -16,8 +16,8 @@ export default function About() {
         <p className='intro-items' id='first-item'>
           Cyrille Fabre, junior web developer, using fullstack Javascript
           languages (React.js And Node.js). <br />
-          You'll find more about my skills and languages upon the right section
-          in the navbar.
+          You'll find more about my skills and languages upon the{' '}
+          <Link to='/skills'>right section</Link>
         </p>
       </div>
       <h2>Why picking me first ?</h2>
@@ -49,13 +49,35 @@ export default function About() {
         </button>
       </p>
       <h2>How to reach me ?</h2>
-      <div className='contact-container'>
+      <p className='contact-container intro-items'>
         <ul className='contact-flex'>
-          <li className='contact-item'>Phone Number : On my resume</li>
-          <li className='contact-item'>Mail : On my resume</li>
-          <li className='contact-item'>Website : </li>
+          <li className='contact-item'>
+            <i class='fas fa-mobile-alt'></i> :{' '}
+            <a href='tel:+33661828655' title='+33661828655'>
+              Call me
+            </a>
+          </li>
+          <li className='contact-item'>
+            <i class='fas fa-envelope'></i> :{' '}
+            <a
+              href='mailto:cyrille.fabre@gmail.com'
+              title='cyrille.fabre@gmail.com'
+            >
+              Email me
+            </a>
+          </li>
+          <li className='contact-item'>
+            <i class='fas fa-at'></i> :{' '}
+            <a
+              href='https://www.facebook.com/Staycalmandcode'
+              title='https://www.facebook.com/Staycalmandcode'
+            >
+              {' '}
+              Web Page
+            </a>
+          </li>
         </ul>
-      </div>
+      </p>
     </div>
   );
 }

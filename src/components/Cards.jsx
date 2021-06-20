@@ -19,7 +19,7 @@ const Cards = (props) => {
         {isFlipped ? (
           <BackSide
             style={{
-              backgroundColor: '#DDDDDD',
+              backgroundColor: '#4F8FDB',
               'text-align': 'center',
               'min-width': '499px',
               'min-height': '230px',
