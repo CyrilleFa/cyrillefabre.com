@@ -12,8 +12,8 @@ const Cards = (props) => {
         flipDirection='horizontal'
         style={{
           'min-width': '499px',
-          'min-height': '230px',
-          backgroundColor: 'transparent',
+          'min-height': '250px',
+          'background-image': "url('{props.img}')",
         }}
       >
         {isFlipped ? (
@@ -22,15 +22,24 @@ const Cards = (props) => {
               backgroundColor: '#4F8FDB',
               'text-align': 'center',
               'min-width': '499px',
-              'min-height': '230px',
+              'min-height': '250px',
             }}
           >
             <a href={props.url} target='_blank' rel='noreferrer'>
-              <h2>
-                {props.id} / {props.name}
-              </h2>
+              <div className='project-image'>
+                <img
+                  className='thumbnail'
+                  src={props.img}
+                  alt={props.name}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    opacity: '0.8',
+                  }}
+                />
+              </div>
             </a>
-            <p>{props.details}</p>
+
             <button className='btn-card' onClick={() => toggle(!isFlipped)}>
               Infos
             </button>
@@ -41,11 +50,11 @@ const Cards = (props) => {
               backgroundColor: '#63CAF2',
               'text-align': 'center',
               'min-width': '499px',
-              'min-height': '230px',
+              'min-height': '250px',
             }}
           >
             <a href={props.url} target='_blank' rel='noreferrer'>
-              <h2>
+              <h2 className='front'>
                 {props.name} {'   '}
                 {props.solo ? (
                   <i class='fas fa-user'></i>
@@ -54,9 +63,12 @@ const Cards = (props) => {
                 )}
               </h2>
             </a>
+
             <p>{props.infos}</p>
+            <h3>Languages</h3>
+            <p className='language'>{props.details}</p>
             <button className='btn-card' onClick={() => toggle(!isFlipped)}>
-              Languages
+              Preview
             </button>
           </FrontSide>
         )}

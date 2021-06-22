@@ -40,7 +40,7 @@ export default function About() {
           onClick={(e) => {
             e.preventDefault();
             window.open(
-              'http://www.cyrillefabre.com/upload/CvDev.pdf',
+              'https://www.cyrillefabre.com/upload/CvDev.pdf',
               '_blank'
             );
           }}
