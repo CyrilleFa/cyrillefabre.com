@@ -28,12 +28,16 @@
 
 .btn:hover {
   cursor: pointer;
-  animation: swirling 2.5s ease-out 1;
+  animation: swirling 2s ease-in-out;
 }
 
 @keyframes swirling {
   0% {
-    transform: skew(20deg, 10deg) scale(0.7) rotate(0deg);
+    transform: scale(0.7) rotate(0deg);
+    background-color: rgb(131, 118, 207);
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
     background-color: rgb(131, 118, 207);
   }
   100% {
@@ -94,8 +98,7 @@ h2 {
   padding-left: 50px;
   width: 30%;
 }
-
-i:hover {
+.contact-item > i:hover {
   animation: bounce 0.5s ease infinite alternate;
   cursor: pointer;
 }
@@ -120,4 +123,8 @@ i:hover {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
+}
+
+a:hover {
+  color: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
 }

@@ -23,24 +23,30 @@ const Cards = (props) => {
               'text-align': 'center',
               'min-width': '499px',
               'min-height': '250px',
+              cursor: 'unset',
             }}
           >
             <a href={props.url} target='_blank' rel='noreferrer'>
-              <div className='project-image'>
-                <img
-                  className='thumbnail'
-                  src={props.img}
-                  alt={props.name}
-                  style={{
-                    maxWidth: '100%',
-                    maxHeight: '100%',
-                    opacity: '0.8',
-                  }}
-                />
-              </div>
+              <span className='goTo'> Website</span>
             </a>
+            <div className='project-image rotate'>
+              <img
+                className='thumbnail'
+                src={props.img}
+                alt={props.name}
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  opacity: '0.8',
+                }}
+              />
+            </div>
 
-            <button className='btn-card' onClick={() => toggle(!isFlipped)}>
+            <button
+              type='button'
+              className='btn-card'
+              onClick={() => toggle(!isFlipped)}
+            >
               Infos
             </button>
           </BackSide>
@@ -78,5 +84,3 @@ const Cards = (props) => {
 };
 
 export default Cards;
-
-// {props.id}

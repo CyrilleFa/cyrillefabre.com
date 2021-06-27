@@ -22,10 +22,10 @@
 .project-item {
   flex: 1 80%;
   margin: 2%;
-  max-width: 500px;
+  max-width: 505px;
   max-height: 300px;
-  border-radius: 20px;
-  box-shadow: 1px 2px 1px 1px black;
+  border-radius: 25px;
+  box-shadow: 1px 2px 30px black;
   color: white;
   cursor: pointer;
   display: flex;
@@ -49,16 +49,16 @@
 .project-image {
   position: absolute;
   left: 0px;
-  border-radius: 50%;
   top: 0px;
-
   margin: 0;
+  box-shadow: #66666b 2px 2px 5px;
 }
 .project-item h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 5%;
+  color: #167a16;
 }
 
 .hidden {
@@ -74,13 +74,26 @@
   left: 0px;
   top: 0px;
   overflow: hidden;
-  border-radius: 5%;
-  min-width: 499px;
+  border-radius: 24px;
+  min-width: 500px;
   height: 250px;
 }
 
 .thumbnail:hover {
   opacity: 0;
+  cursor: default;
+}
+
+.goTo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 25px;
+  color: white;
+  z-index: 1;
+  transform: rotate(-90deg) translate(-130%, -95%);
+  text-shadow: 2px 2px 10px white;
+  border-bottom: 1px ridge black;
 }
 
 .btn-card {

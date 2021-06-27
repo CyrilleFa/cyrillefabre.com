@@ -1,66 +1,74 @@
-import { useState } from 'react';
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import Skill from './Skill.jsx';
+import '../css/Skills.css';
 
-const SkillList = (props) => {
-  const [isFlipped, toggle] = useState(false);
+const skillList = [
+  {
+    id: 1,
+    name: 'React.js',
+    icon: 'devicon-react-original',
+    front: true,
+    details: 'Call Api, Hooks',
+  },
+  {
+    id: 2,
+    name: 'Node.js',
+    icon: 'devicon-nodejs-plain',
+    front: false,
+    details: 'Call Api, Hooks',
+  },
+  {
+    id: 3,
+    name: 'Javascript',
+    icon: 'devicon-javascript-plain',
+    front: true,
+    details: 'Call Api, Hooks',
+  },
+  {
+    id: 4,
+    name: 'MySql',
+    icon: 'devicon-mysql-plain',
+    front: false,
+    details: 'Call Api, Hooks',
+  },
+  {
+    id: 5,
+    name: 'Tools Front',
+    icon: 'https://www.cyrillefabre.com',
+    details: 'Call Api, Hooks',
+  },
+  {
+    id: 6,
+    name: 'Autre Tools',
+    icon: 'https://region-sud.woozy.fr/',
+    details: 'Call Api, Hooks',
+  },
+  {
+    id: 7,
+    name: 'Figma',
+    icon: 'https://www.pokemonsteam.fr',
+    front: true,
+  },
+  {
+    id: 8,
+    name: 'Postman',
+    icon: 'https://www.pokemonsteam.fr',
+    front: false,
+  },
+];
 
+export default function SkillList() {
   return (
-    <div className='project-item'>
-      <h1>WIP</h1>
-      <Flippy
-        flipOnHover={false}
-        flipOnClick={true}
-        flipDirection='horizontal'
-        style={{
-          'min-width': '499px',
-          'min-height': '230px',
-          backgroundColor: 'transparent',
-        }}
-      >
-        {isFlipped ? (
-          <BackSide
-            style={{
-              backgroundColor: '#DDDDDD',
-              'text-align': 'center',
-              'min-width': '499px',
-              'min-height': '230px',
-            }}
-          >
-            <a href={props.url} target='_blank' rel='noreferrer'>
-              <h2>
-                {props.id} / {props.name}
-              </h2>
-            </a>
-            <p>{props.details}</p>
-            <button className='btn-card' onClick={() => toggle(!isFlipped)}>
-              Infos
-            </button>
-          </BackSide>
-        ) : (
-          <FrontSide
-            style={{
-              backgroundColor: '#1687a7',
-              'text-align': 'center',
-              'min-width': '499px',
-              'min-height': '230px',
-            }}
-          >
-            <a href={props.url} target='_blank' rel='noreferrer'>
-              <h2>
-                {props.id} / {props.name} ( {props.type} )
-              </h2>
-            </a>
-            <p>
-              {props.infos} {props.type ? 'Solo' : 'Team'}
-            </p>
-            <button className='btn-card' onClick={() => toggle(!isFlipped)}>
-              Languages
-            </button>
-          </FrontSide>
-        )}
-      </Flippy>
+    <div className='skill-container'>
+      {skillList.map((item) => {
+        return (
+          <Skill
+            icon={item.icon}
+            name={item.name}
+            front={item.front}
+            id={item.id}
+          />
+        );
+      })}
     </div>
   );
-};
-
-export default SkillList;
+}
