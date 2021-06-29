@@ -7,21 +7,21 @@ const skillList = [
     name: 'React.js',
     icon: 'devicon-react-original',
     front: true,
-    details: 'Call Api, Hooks',
+    details: 'Call Api, Hooks, Router',
   },
   {
     id: 2,
     name: 'Node.js',
     icon: 'devicon-nodejs-plain',
     front: false,
-    details: 'Call Api, Hooks',
+    details: 'Route, CRUD, Express',
   },
   {
     id: 3,
     name: 'Javascript',
     icon: 'devicon-javascript-plain',
     front: true,
-    details: 'Call Api, Hooks',
+    details: 'DOM manipulation',
   },
   {
     id: 4,
@@ -32,40 +32,71 @@ const skillList = [
   },
   {
     id: 5,
-    name: 'Tools Front',
-    icon: 'https://www.cyrillefabre.com',
+    name: 'Postman',
+    icon: '',
+    front: false,
     details: 'Call Api, Hooks',
   },
   {
     id: 6,
-    name: 'Autre Tools',
-    icon: 'https://region-sud.woozy.fr/',
-    details: 'Call Api, Hooks',
+    name: 'Git / GitHub',
+    icon: 'devicon-github-original',
+    details: 'Versioning / Working Flow',
   },
   {
     id: 7,
     name: 'Figma',
-    icon: 'https://www.pokemonsteam.fr',
+    icon: 'devicon-figma-plain',
     front: true,
+    details: 'Wireframing',
   },
   {
     id: 8,
-    name: 'Postman',
-    icon: 'https://www.pokemonsteam.fr',
+    name: 'Web Hosting',
+    icon: '',
     front: false,
+    details: 'O2switch',
   },
+  {
+    id: 9,
+    name: 'Slack',
+    icon: 'devicon-slack-plain',
+    details: '6 months remotely with school',
+  },
+  // {
+  //   id: 10,
+  //   name: '',
+  //   icon: '',
+  //   front: false,
+  //   details: '',
+  // },
+  // {
+  //   id: 11,
+  //   name: '',
+  //   icon: '',
+  //   front: false,
+  //   details: '',
+  // },
+  // {
+  //   id: 12,
+  //   name: '',
+  //   icon: '',
+  //   front: false,
+  //   details: '',
+  // },
 ];
 
 export default function SkillList() {
   return (
     <div className='skill-container'>
-      {skillList.map((item) => {
+      {skillList.map(({ icon, name, front, details, id }) => {
         return (
           <Skill
-            icon={item.icon}
-            name={item.name}
-            front={item.front}
-            id={item.id}
+            icon={icon}
+            name={name}
+            front={front}
+            details={details}
+            id={id}
           />
         );
       })}

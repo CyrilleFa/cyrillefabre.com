@@ -2,33 +2,31 @@ import Flippy, { FrontSide } from 'react-flippy';
 import '../css/Skills.css';
 
 const Skill = (props) => {
+  const { name, front, icon, details } = props;
   return (
-    <div className='project-item'>
-      {props.id !== 5 && props.id !== 6 ? (
-        <Flippy
-          flipOnHover={false}
-          flipOnClick={false}
+    <div className='skill-item'>
+      <Flippy
+        flipOnHover={false}
+        flipOnClick={false}
+        style={{
+          'min-width': '250px',
+          'min-height': '200px',
+          backgroundColor: 'transparent',
+        }}
+      >
+        <FrontSide
           style={{
-            'min-width': '499px',
-            'min-height': '230px',
-            backgroundColor: 'transparent',
+            'text-align': 'center',
+            'min-width': '250px',
+            'min-height': '200px',
           }}
         >
-          <FrontSide
-            style={{
-              'text-align': 'center',
-              'min-width': '499px',
-              'min-height': '230px',
-            }}
-          >
-            <h2>{props.name}</h2>
-            <p>{props.front}</p>
-            <i class={`${props.icon} icon`}></i>
-          </FrontSide>
-        </Flippy>
-      ) : (
-        <div>{props.name}</div>
-      )}
+          <h2 className='skill-title'>{name}</h2>
+          <p>{front}</p>
+          <i class={`${icon} icon`}></i>
+          <div className='skill-details'>{details}</div>
+        </FrontSide>
+      </Flippy>
     </div>
   );
 };

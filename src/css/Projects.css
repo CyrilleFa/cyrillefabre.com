@@ -1,9 +1,9 @@
 .project-container {
   display: flex;
   flex-flow: row wrap;
-  box-sizing: border-box;
   justify-content: center;
   width: 80%;
+  min-height: 100%;
   margin: 2% auto;
   box-shadow: 1px 3px 3px 2px black;
   border-radius: 20px;
@@ -22,8 +22,7 @@
 .project-item {
   flex: 1 80%;
   margin: 2%;
-  max-width: 505px;
-  max-height: 300px;
+  max-width: 500px;
   border-radius: 25px;
   box-shadow: 1px 2px 30px black;
   color: white;
@@ -37,7 +36,6 @@
   font-style: unset;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 0;
 }
 
 .project-item h2 i {

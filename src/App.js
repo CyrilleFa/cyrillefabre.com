@@ -23,10 +23,10 @@ function App() {
       </div>
 
       <Switch>
-        <Route exact path='/' component={Homepage} />
-        <Route path='/projects' component={Projects} />
+        <Route exact path='/projects' component={Projects} />
         <Route path='/about' component={About} />
-        <Route path='/skills' component={SkillList} />
+        <Route exact path='/skills' component={SkillList} />
+        <Route exact path='/' component={Homepage} />
       </Switch>
       <Footer />
     </div>

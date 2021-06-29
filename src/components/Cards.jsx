@@ -21,8 +21,8 @@ const Cards = (props) => {
             style={{
               backgroundColor: '#4F8FDB',
               'text-align': 'center',
-              'min-width': '499px',
-              'min-height': '250px',
+              'min-width': '497px',
+              'min-height': '150px',
               cursor: 'unset',
             }}
           >
